@@ -4,10 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Mi Calendario:: Ing. Urian Viera</title>
-
-
-
+  <title>Calendario</title>
   <link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -48,7 +45,9 @@
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/moment.min.js"></script>
   <script type="text/javascript" src="js/fullcalendar.min.js"></script>
-  <script src='locales/es.js'></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/pt-br.js"></script>
+  <script src='regiao/pt-br.js'></script>
 
 
   <script type="text/javascript">
@@ -60,7 +59,7 @@
           right: "month,agendaWeek,agendaDay"
         },
 
-        locale: 'es',
+        locale: 'pt-br',
 
         defaultView: "month",
         navLinks: true,
@@ -89,7 +88,7 @@
           while ($dataEvento = $resulEventos->FETCH(PDO::FETCH_OBJ)) {
 
             ?>
-                                        {
+                                                          {
               _id: '<?php echo $dataEvento['id']; ?>',
               title: '<?php echo $dataEvento['evento']; ?>',
               start: '<?php echo $dataEvento['fecha_inicio']; ?>',
